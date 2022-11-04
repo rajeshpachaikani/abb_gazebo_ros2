@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<robot name="abb_irb6700_200_260" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_irb6700_gazebo)/urdf/irb6700_200_260_macro.xacro" />
+  <xacro:include filename="$(find abb_irb6700_gazebo)/urdf/gazebo_config_control.xacro" />
+
+  <xacro:abb_irb6700_200_260_gazebo prefix="" />
+
+  <!-- connect robot with world -->
+  <link name="world" />
+  <joint name="world_fixed" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <xacro:config_ctr_gazebo prefix=""/>
+
+</robot>

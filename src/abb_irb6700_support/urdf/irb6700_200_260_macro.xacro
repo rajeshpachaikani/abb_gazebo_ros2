@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="abb_irb6700_200_260" params="prefix">
+    <xacro:include filename="$(find abb_resources)/urdf/common_materials.xacro" />
+    <!-- link list -->
+    <link name="${prefix}base_link">
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.10855559016786254 4.5170991954298754e-05 0.13955856637596703" />
+        <mass value="92.0108417726865" />
+        <inertia ixx="0.003996689745423826" ixy="-1.1334066156211666e-07" ixz="-0.00035904256749446446" iyy="0.007754638386116473" iyz="-2.1423836334408407e-08" izz="0.009875568703575595" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/base_link.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/base_link.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_1">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.1589031786690762 0.02389950045800099 -0.16386595421712602" />
+        <mass value="54.5977272371089" />
+        <inertia ixx="0.0035202600221374003" ixy="-0.0005731460972213275" ixz="-0.0015392362691559066" iyy="0.005543127273465252" iyz="-0.00018865105437574197" izz="0.004743201499752353" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/link_1.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/link_1.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}cylinder">
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.09654269450813271 -1.079357385664413e-05 -0.02043658452261234" />
+        <mass value="38.4204622737612" />
+        <inertia ixx="0.0007640349272363187" ixy="4.220964180995403e-08" ixz="-0.00017919198831434745" iyy="0.0015987089881165561" iyz="3.1304802100277813e-09" izz="0.0015703839479117852" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/cylinder.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/cylinder.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}piston">
+      <inertial>
+        <origin rpy="0 0 0" xyz="7.030760061958125e-05 0.2452351320264397 1.1383891396759235e-05" />
+        <mass value="12.339985132202377" />
+        <inertia ixx="6.770708163470597e-05" ixy="-1.3541188504025166e-08" ixz="2.9560655219660683e-11" iyy="8.355423161262474e-07" iyz="-3.977403219825737e-09" izz="6.739658108209847e-05" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/piston.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/piston.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_2">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.044979172309568397 -0.2660799082351537 0.5346057200867603" />
+        <mass value="50.6743291699327" />
+        <inertia ixx="0.0064348391946592596" ixy="9.070502480167988e-06" ixz="0.00019543977083019204" iyy="0.006717331141489154" iyz="0.0005991261667175189" izz="0.0008971369263712823" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/visual/link_2.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/collision/link_2.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_3">
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.044726081733450926 0.0016009851348857981 0.11190247606299264" />
+        <mass value="40.06185344461613" />
+        <inertia ixx="0.0019214126752920494" ixy="0.00026548615211387477" ixz="0.00018931102654043324" iyy="0.0015642798452755035" iyz="-0.00034683751326580476" izz="0.001973251442301816" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/visual/link_3.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/collision/link_3.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_4">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.6268602699917565 -0.002515683835374019 1.3740109674158836e-05" />
+        <mass value="44.87688227769655" />
+        <inertia ixx="0.0006711476925628299" ixy="9.066910852068699e-05" ixz="-5.636088278495086e-07" iyy="0.009522639870081314" iyz="1.6718992045398534e-07" izz="0.009850034450865262" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/visual/link_4.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700_200_260/collision/link_4.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_5">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.016082766968828318 0.003469156663341444 -0.0016584952415219863"/>
+        <mass value="59.52834589582224"/>
+        <inertia ixx="3.131188577981427e-05" ixy="1.915377762235513e-06" ixz="1.2197175783721276e-06" iyy="7.49535334980292e-05" iyz="4.960622490574281e-07" izz="8.020120702684806e-05"/>
+     </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/link_5.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/link_5.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+    <link name="${prefix}link_6">
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.017990847205242654 1.807753889679926e-05 -0.00024119990841147548"/>
+        <mass value="5.5456370799534085"/>
+        <inertia ixx="3.851933969155547e-06" ixy="-1.425218832397648e-10" ixz="6.857112670058758e-10" iyy="1.990451258407013e-06" iyz="-1.4228320838802587e-09" izz="2.0046522003612565e-06"/>
+     </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/visual/link_6.stl" />
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:///$(find abb_irb6700_support)/meshes/irb6700/collision/link_6.stl" />
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+    </link>
+
+    <joint name="${prefix}joint_1" type="revolute">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}link_1" />
+      <axis xyz="0 0 1" />
+      <limit lower="-${radians(170)}" upper="${radians(170)}" effort="0" velocity="${radians(110)}" />
+    </joint>
+    <joint name="${prefix}joint_2" type="revolute">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <parent link="${prefix}link_1" />
+      <child link="${prefix}link_2" />
+      <axis xyz="0 1 0" />
+      <limit lower="-${radians(65)}" upper="${radians(85)}" effort="0" velocity="${radians(110)}" />
+    </joint>
+    <joint name="${prefix}joint_3" type="revolute">
+      <origin xyz="0 0 1.125" rpy="0 0 0" />
+      <parent link="${prefix}link_2" />
+      <child link="${prefix}link_3" />
+      <axis xyz="0 1 0" />
+      <limit lower="-${radians(180)}" upper="${radians(70)}" effort="0" velocity="${radians(110)}" />
+    </joint>
+    <joint name="${prefix}joint_4" type="revolute">
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <parent link="${prefix}link_3" />
+      <child link="${prefix}link_4" />
+      <axis xyz="1 0 0" />
+      <limit lower="-${radians(300)}" upper="${radians(300)}" effort="0" velocity="${radians(190)}" />
+    </joint>
+    <joint name="${prefix}joint_5" type="revolute">
+      <origin xyz="1.1425 0 0" rpy="0 0 0" />
+      <parent link="${prefix}link_4" />
+      <child link="${prefix}link_5" />
+      <axis xyz="0 1 0" />
+      <limit lower="-${radians(130)}" upper="${radians(130)}" effort="0" velocity="${radians(150)}" />
+    </joint>
+    <joint name="${prefix}joint_6" type="revolute">
+      <origin xyz="0.2 0 0" rpy="0 0 0" />
+      <parent link="${prefix}link_5" />
+      <child link="${prefix}link_6" />
+      <axis xyz="1 0 0" />
+      <limit lower="-${radians(360)}" upper="${radians(360)}" effort="0" velocity="${radians(210)}" />
+    </joint>
+    <joint name="${prefix}cylinder_joint" type="revolute">
+      <origin xyz="-0.349 -0.194 -0.142" rpy="0 0 0" />
+      <parent link="${prefix}link_1" />
+      <child link="${prefix}cylinder" />
+      <axis xyz="0 1 0" />
+      <mimic joint="${prefix}joint_2" multiplier="-0.25" />
+      <limit lower="-${radians(65*0.25)}" upper="${radians(85*0.25)}" effort="0" velocity="100" />
+    </joint>
+    <joint name="${prefix}piston_joint" type="prismatic">
+      <origin xyz="0 0 0" rpy="0.20897 0 -${radians(90)}" />
+      <parent link="${prefix}cylinder" />
+      <child link="${prefix}piston" />
+      <axis xyz="0 1 0" />
+      <mimic joint="${prefix}joint_2" multiplier="0.15" />
+      <limit lower="-0.25" upper="0.25" effort="0" velocity="100" />
+    </joint>
+
+    <!-- ROS-Industrial 'base' frame: base_link to ABB World Coordinates transform -->
+    <link name="${prefix}base" />
+    <joint name="${prefix}base_link-base" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}base" />
+    </joint>
+
+    <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+    <link name="${prefix}flange" />
+    <joint type="fixed" name="${prefix}joint_6-flange">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="${prefix}link_6" />
+      <child link="${prefix}flange" />
+    </joint>
+
+    <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+    <link name="${prefix}tool0" />
+    <joint name="${prefix}link_6-tool0" type="fixed">
+      <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
+      <parent link="${prefix}flange" />
+      <child link="${prefix}tool0" />
+    </joint>
+  </xacro:macro>
+</robot>
